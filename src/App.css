@@ -1,0 +1,209 @@
+/* Solo Leveling / Igris Theme */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap');
+
+:root {
+  --background-color: #10111A;
+  --card-background: #191A23;
+  --text-color: #E0E0E0;
+  --primary-glow-color: #4D4DFF;
+  --secondary-glow-color: #8C52FF;
+  --red-glow-color: #FF3B5F;
+  --green-glow-color: #00FF9B;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Rajdhani', sans-serif;
+  margin: 0;
+}
+
+.App {
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.header h1 {
+  font-size: 2.8rem;
+  color: var(--primary-glow-color);
+  text-shadow: 0 0 12px var(--primary-glow-color), 0 0 24px var(--primary-glow-color);
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card {
+  background-color: var(--card-background);
+  border: 1px solid var(--primary-glow-color);
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 20px rgba(77, 77, 255, 0.3);
+}
+
+.card h2 {
+  color: var(--secondary-glow-color);
+  border-bottom: 1px solid var(--secondary-glow-color);
+  padding-bottom: 12px;
+  margin-top: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+}
+
+canvas {
+  max-width: 100%;
+}
+
+/* Стили для чеклиста активностей */
+.checklist-container {
+  background-color: var(--card-background);
+  border: 1px solid var(--primary-glow-color);
+  border-radius: 10px;
+  padding: 25px;
+  margin: 25px auto;
+  max-width: 450px;
+  box-shadow: 0 0 20px rgba(77, 77, 255, 0.3);
+}
+
+.checklist-container h2 {
+  color: var(--secondary-glow-color);
+  border-bottom: 1px solid var(--secondary-glow-color);
+  padding-bottom: 12px;
+  margin-top: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 1.6em;
+}
+
+.checklist-container p {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.checklist-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.checklist-container li {
+  font-size: 1.2em;
+  margin: 12px 0;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  border-left: 4px solid var(--secondary-glow-color);
+  transition: all 0.3s ease;
+}
+
+.checklist-container li.done {
+  border-left-color: var(--green-glow-color);
+  color: var(--green-glow-color);
+  text-shadow: 0 0 10px var(--green-glow-color);
+}
+
+.checklist-container li:not(.done) {
+  border-left-color: var(--red-glow-color);
+  color: var(--red-glow-color);
+  text-shadow: 0 0 10px var(--red-glow-color);
+}
+
+/* Стили для исторического чеклиста */
+.history-checklist-container {
+  background-color: var(--card-background);
+  border: 1px solid var(--primary-glow-color);
+  border-radius: 10px;
+  padding: 25px;
+  margin: 25px auto;
+  max-width: 450px;
+  box-shadow: 0 0 20px rgba(77, 77, 255, 0.3);
+}
+
+.history-checklist-container h2 {
+  color: var(--secondary-glow-color);
+  border-bottom: 1px solid var(--secondary-glow-color);
+  padding-bottom: 12px;
+  margin-top: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 1.6em;
+}
+
+.history-checklist-container p {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.history-checklist-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.history-checklist-container li {
+  font-size: 1.2em;
+  margin: 12px 0;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  border-left: 4px solid var(--secondary-glow-color);
+  transition: all 0.3s ease;
+}
+
+.history-checklist-container li.done {
+  border-left-color: var(--green-glow-color);
+  color: var(--green-glow-color);
+  text-shadow: 0 0 10px var(--green-glow-color);
+}
+
+.history-checklist-container li:not(.done) {
+  border-left-color: var(--red-glow-color);
+  color: var(--red-glow-color);
+  text-shadow: 0 0 10px var(--red-glow-color);
+}
+
+.history-checklist-container select.date-selector {
+  background-color: var(--card-background);
+  color: var(--text-color);
+  border: 1px solid var(--primary-glow-color);
+  border-radius: 6px;
+  padding: 12px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.2em;
+  width: 100%;
+  margin-bottom: 20px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.history-checklist-container select.date-selector:focus {
+  border-color: var(--secondary-glow-color);
+  box-shadow: 0 0 10px rgba(140, 82, 255, 0.5);
+}
+
+.loading, .error {
+  text-align: center;
+  font-size: 1.3em;
+  color: var(--text-color);
+  margin: 25px;
+}
